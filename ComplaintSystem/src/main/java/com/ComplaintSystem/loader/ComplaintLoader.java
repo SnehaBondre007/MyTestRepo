@@ -43,22 +43,24 @@ public class ComplaintLoader {
 	private static Complaint createComplaint(String[] metadata) throws ParseException { 
 	
 		
-		String complaintId = metadata[0];
-		String dateReceived = metadata[1] ;
-		String product = metadata[2];
-		String subProduct = metadata[3]; 
-		String issue = metadata[4];
-		String subIssue = metadata[5]; 
-		String company = metadata[6];
-		String state = metadata[7]; 
-		String zipCode = metadata[8];
-		String submittedVia = metadata[9]; 
-		String dateClosed = metadata[10];
-		String companyResponseToConsumer = metadata[11]; 
-		String timelyResponse = metadata[12];
-		String consumerDisputed = metadata[13];
 		
-		 return new Complaint(complaintId, dateReceived, product,subProduct,issue,subIssue,company,state,zipCode,submittedVia,dateClosed,companyResponseToConsumer,timelyResponse,consumerDisputed);
+		String dateReceived = metadata[0] ;
+		String product = metadata[1];
+		String subProduct = metadata[2]; 
+		String issue = metadata[3];
+		String subIssue = metadata[4]; 
+		String company = metadata[5];
+		String state = metadata[6]; 
+		String zipCode = metadata[7];
+		String submittedVia = metadata[8]; 
+		String dateClosed = metadata[9];
+		String companyResponseToConsumer = metadata[10]; 
+		String timelyResponse = metadata[11];
+		String consumerDisputed = metadata[12];
+		String complaintId = metadata[13];
+	
+		
+		 return new Complaint(dateReceived, product,subProduct,issue,subIssue,company,state,zipCode,submittedVia,dateClosed,companyResponseToConsumer,timelyResponse,consumerDisputed,complaintId);
     }
 	
 	public static List<Complaint> readBooksFromCSV(String fileName) throws ParseException {
