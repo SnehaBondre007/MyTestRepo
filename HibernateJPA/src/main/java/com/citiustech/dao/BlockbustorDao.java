@@ -16,10 +16,10 @@ public class BlockbustorDao extends GenericDao{
 				.getResultList();
 	}
 
-	public List<Movie> fetchMovies() {
+	public List<String> fetchMovies() {
 		return entitymanagerfactory
 				.createEntityManager()
-				.createQuery("select distinct m.movie_name from Movie m ", Movie.class)
+				.createQuery("select distinct movie_name from Movie")
 				.getResultList();
 	}
 }
