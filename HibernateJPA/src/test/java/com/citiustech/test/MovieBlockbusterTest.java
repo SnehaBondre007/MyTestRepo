@@ -32,6 +32,7 @@ public class MovieBlockbusterTest {
 		GenericDao dao =  new GenericDao();
 		Staff s = new Staff();
 		s.setStaff_name("Makky");
+		s.setShifttype("morning shift");
 		dao.save(s);
 	}
 	
