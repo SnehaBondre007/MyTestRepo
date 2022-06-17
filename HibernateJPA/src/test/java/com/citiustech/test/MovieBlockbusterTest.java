@@ -121,7 +121,7 @@ public class MovieBlockbusterTest {
 	@Test
 	public void fetchAllMovies() {
 		BlockbusterService service = new BlockbusterService();
-		List<Movie> list = service.fetchAllMovies();
+		List<String> list = service.fetchAllMovies();
 		list.forEach(System.out::println);
 	}
 	
