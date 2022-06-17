@@ -55,7 +55,7 @@ public class BlockbusterService {
 		return dao.fetchStaffDetail(staff_id);
 		
 	}
-		public List<Movie> fetchAllMovies(){
+		public List<String> fetchAllMovies(){
 			BlockbustorDao dao = new BlockbustorDao();
 			return dao.fetchMovies();
 		}
