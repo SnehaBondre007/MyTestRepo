@@ -10,7 +10,16 @@ public class Staff {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int staff_id;
 	private String staff_name;
+	private String shifttype;
 	
+	public String getShifttype() {
+		return shifttype;
+	}
+
+	public void setShifttype(String shifttype) {
+		this.shifttype = shifttype;
+	}
+
 	@OneToOne(mappedBy = "staff")
 	private Shop shop;
 
@@ -39,8 +48,6 @@ public class Staff {
 	public void setShop(Shop shop) {
 		this.shop = shop;
 	}
-	
-	
 	
 
 }
